@@ -1,8 +1,20 @@
+/*bodyにdisplay:flex以下を記入*/
+
 body {
     background-color: #FAF0F0;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
-
+/* 全てのdivにmargin:autoを与える */
+div{
+    margin: auto;
+}
+.coupleimage img{
+    width: 400px;
+}
 .subtitle{
     font-family: 'Noto Serif JP',"YuMincho","Hiragino Mincho ProN";
     padding-top:60px;
