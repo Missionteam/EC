@@ -21,41 +21,46 @@
         <img src="img/ShopIcon.png" sizes="(max-width: 600px) 60vw, 40vw" alt="Example image">
     </div>
 
-    検索窓
+    <!-- 検索窓 -->
     <div class="search-container">
         <input type="text" id="searchBox" placeholder="条件から選ぶ">
         <div id="searchIcon">
-            <img src="虫眼鏡画像のURL" alt="search">
+            <img src="img/虫眼鏡圧縮3.png" alt="search">
         </div>
     </div>
 
-    <div id="filterBox" class="filter-section">
-        <!-- 先ほどの絞り込み機能のコード -->
+    <div id="dropdown" style="display: none;">
+    
+        <!-- 絞り込み機能 -->
+        <div class="filter-section">
+            
+            <h4 class="shiborikomi">価格</h4>
+                <div>
+                    <input type="checkbox" id="price1" name="price" value="low">
+                    <label for="price1" class="label-left">～2000円</label><br>
+                    <input type="checkbox" id="price2" name="price" value="medium">
+                    <label for="price2" class="label-left">2000～5000円</label><br>
+                    <input type="checkbox" id="price3" name="price" value="high">
+                    <label for="price3" class="label-left">5000～10000円</label><br>
+                    <input type="checkbox" id="price1" name="price" value="low">
+                    <label for="price1" class="label-left">10000～20000円</label><br>
+                </div>
+
+            <h4 class="shiborikomi">シーン</h4>
+                <div>
+                    <input type="checkbox" id="scene1" name="scene" value="indoors">
+                    <label for="scene1">屋内</label><br>
+                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <label for="scene2">屋外</label>
+                </div>
+
+            <!-- 残りのテーマも同様に -->
+        </div>
+        <a href="products.html" id="searchButton">検索</a>
+    
     </div>
 
-
-    <div class="filter-section">
-        <h2>価格</h2>
-        <div>
-            <input type="checkbox" id="price1" name="price" value="low">
-            <label for="price1">低</label><br>
-            <input type="checkbox" id="price2" name="price" value="medium">
-            <label for="price2">中</label><br>
-            <input type="checkbox" id="price3" name="price" value="high">
-            <label for="price3">高</label>
-        </div>
-
-        <h2>シーン</h2>
-        <div>
-            <input type="checkbox" id="scene1" name="scene" value="indoors">
-            <label for="scene1">屋内</label><br>
-            <input type="checkbox" id="scene2" name="scene" value="outdoors">
-            <label for="scene2">屋外</label>
-        </div>
-
-        <!-- 残りのテーマも同様に -->
-    </div>
-
+    
     <div class="coupleimage">
         <img src="https://basefile.akamaized.net/bluecampus-base-shop/6448b0f7cfb72/E382ABE38383E38397E383AB.png"
             srcset="https://basefile.akamaized.net/bluecampus-base-shop/6448b0f7cfb72/E382ABE38383E38397E383AB.png 1000w,
@@ -70,7 +75,7 @@
             <br>
             2人のプレゼント選びを
             <br>
-            もっと楽しくするためのアプリです。
+            もっと楽しくするためのサイトです。
             <br><br>
             落ち込んでいる恋人、
             <br>
@@ -195,6 +200,7 @@
                         </a>
                     </div>
 
+        <script src="main.js"></script>
 </body>
 
 </html>
