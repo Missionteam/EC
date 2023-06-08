@@ -59,8 +59,8 @@ div{
     align-items: center;
 }
 
-.label-left {
-    text-align: left !important;
+.filter-section {
+    text-align: left;
 }
 
 .checkbox-container {
@@ -95,10 +95,14 @@ div{
 
 .shiborikomi {
     text-align: left;
-
+    font-weight: bold;
+    line-height: 0.01;
 }
 
+.label-left {
+    font-size: 12px;
 
+}
 
   #searchButton {
     display: block;
@@ -133,19 +137,6 @@ div{
     margin-bottom:30px;
 }
 
-
-.Happiness p{
-    font-size:14px;
-    color:#FB7D7D;
-    text-decoration:underline;
-    font-family: Noto Serif JP;
-    font-weight: bold;
-}
-.Happiness {
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
 
 .giftlist_text {
     font-size:14px;

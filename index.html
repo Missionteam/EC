@@ -34,7 +34,7 @@
         <!-- 絞り込み機能 -->
         <div class="filter-section">
             
-            <h4 class="shiborikomi">価格</h4>
+            <p class="shiborikomi">価格</p>
                 <div>
                     <input type="checkbox" id="price1" name="price" value="low">
                     <label for="price1" class="label-left">～2000円</label><br>
@@ -42,16 +42,34 @@
                     <label for="price2" class="label-left">2000～5000円</label><br>
                     <input type="checkbox" id="price3" name="price" value="high">
                     <label for="price3" class="label-left">5000～10000円</label><br>
-                    <input type="checkbox" id="price1" name="price" value="low">
-                    <label for="price1" class="label-left">10000～20000円</label><br>
+                    <input type="checkbox" id="price4" name="price" value="low">
+                    <label for="price1" class="label-left">10000～20000円</label><br><br>
                 </div>
-
-            <h4 class="shiborikomi">シーン</h4>
+                
+            <p class="shiborikomi">シーン</p>
                 <div>
                     <input type="checkbox" id="scene1" name="scene" value="indoors">
-                    <label for="scene1">屋内</label><br>
+                    <label for="scene1" class="label-left">イベント</label><br>
                     <input type="checkbox" id="scene2" name="scene" value="outdoors">
-                    <label for="scene2">屋外</label>
+                    <label for="scene2" class="label-left">誕生日</label><br>
+                    <input type="checkbox" id="scene3" name="scene" value="outdoors">
+                    <label for="scene2" class="label-left">記念日</label><br>
+                    <input type="checkbox" id="scene4" name="scene" value="outdoors">
+                    <label for="scene2" class="label-left">日常</label><br><br>
+                   
+                </div>
+
+                <p class="shiborikomi">恋人の特徴</p>
+                <div>
+                    <input type="checkbox" id="scene1" name="scene" value="indoors">
+                    <label for="scene1" class="label-left">ロマンチスト</label><br>
+                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <label for="scene2" class="label-left">現実的</label><br>
+                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <label for="scene2" class="label-left">こだわりが強い</label><br>
+                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <label for="scene2" class="label-left">日常</label><br><br>
+                   
                 </div>
 
             <!-- 残りのテーマも同様に -->
@@ -99,11 +117,7 @@
             <br>
 
 
-            <div class=Happiness>
-                <a href="https://lin.ee/IOyd7yo">
-                    <button class="detail_button">LINE追加して診断する</button>
-                </a>
-            </div>
+ 
 
             <br>
             <br>
@@ -186,19 +200,7 @@
                         </a>
                     </div>
 
-                    <div class="scroll-item">
-                        <a href="{AboutPageURL}">
-                            <button class="mattari_button">
-                                <div class="mattari_image">
-                                    <img src="https://basefile.akamaized.net/plushapiness-base-shop/64605062d63f9/8.png"
-                                        alt="Example image">
-                                </div>
-                                <div class="mattari_text">
-                                    いつもと違うデートをする！
-                                </div>
-                            </button>
-                        </a>
-                    </div>
+                
 
         <script src="main.js"></script>
 </body>
