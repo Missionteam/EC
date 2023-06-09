@@ -42,17 +42,17 @@
                     <label for="price2" class="label-left">2000～5000円</label><br>
                     <input type="checkbox" id="price3" name="price" value="high">
                     <label for="price3" class="label-left">5000～10000円</label><br>
-                    <input type="checkbox" id="price4" name="price" value="low">
+                    <input type="checkbox" id="price4" name="price" value="veryhigh">
                     <label for="price1" class="label-left">10000～20000円</label><br><br>
                 </div>
                 
             <p class="shiborikomi">シーン</p>
                 <div>
-                    <input type="checkbox" id="scene1" name="scene" value="indoors">
+                    <input type="checkbox" id="scene1" name="scene" value="event">
                     <label for="scene1" class="label-left">イベント</label><br>
-                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <input type="checkbox" id="scene2" name="scene" value="birthday">
                     <label for="scene2" class="label-left">誕生日</label><br>
-                    <input type="checkbox" id="scene3" name="scene" value="outdoors">
+                    <input type="checkbox" id="scene3" name="scene" value="anniversary">
                     <label for="scene2" class="label-left">記念日</label><br>
                     <input type="checkbox" id="scene4" name="scene" value="outdoors">
                     <label for="scene2" class="label-left">日常</label><br><br>
@@ -61,20 +61,20 @@
 
                 <p class="shiborikomi">恋人の特徴</p>
                 <div>
-                    <input type="checkbox" id="scene1" name="scene" value="indoors">
+                    <input type="checkbox" id="feature1" name="feature" value="lomantist">
                     <label for="scene1" class="label-left">ロマンチスト</label><br>
-                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <input type="checkbox" id="feature2" name="feature" value="realist">
                     <label for="scene2" class="label-left">現実的</label><br>
-                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <input type="checkbox" id="feature3" name="feature" value="obsessed">
                     <label for="scene2" class="label-left">こだわりが強い</label><br>
-                    <input type="checkbox" id="scene2" name="scene" value="outdoors">
+                    <input type="checkbox" id="feature4" name="feature" value="ordinary">
                     <label for="scene2" class="label-left">日常</label><br><br>
                    
                 </div>
 
             <!-- 残りのテーマも同様に -->
         </div>
-        <a href="products.html" id="searchButton">検索</a>
+        <button id="searchButton" onclick="search()">検索</button>
     
     </div>
 
