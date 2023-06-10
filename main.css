@@ -3,61 +3,76 @@
 body {
     background-color: #FAF0F0;
     margin-bottom: 50px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
+
 /* 全てのdivにmargin:autoを与える */
-div{
+div {
     margin: auto;
 }
-.coupleimage img{
+
+a {
+    text-decoration: none;
+}
+
+.coupleimage img {
     width: 400px;
 }
-.subtitle{
-    font-family: 'Noto Serif JP',"YuMincho","Hiragino Mincho ProN";
-    padding-top:60px;
-    padding-bottom:20px;
-    text-align: Center;
+
+.subtitle {
+    font-family: 'Noto Serif JP', "YuMincho", "Hiragino Mincho ProN";
+    padding-top: 60px;
+    padding-bottom: 20px;
     font-size: 30px;
-    
-    }
+}
+
+.subtitle配置 {
+    text-align: Center;
+}
 
 .coupleimage {
-    margin:auto ;
- }
+    margin: auto;
+}
+
+.coupleimage img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .coupleimage{
+        width: 60%;
+    }
+}
+
+@media (min-width: 601px) {
+    .coupleimage{
+        width: 40%;
+    }
+}
 
 .img {
     display: block;
-  }
+}
 
-  .search-container {
+.search-container {
     position: relative;
-    background-color: #FBA5A5;
-    width: 200px; /* 好みの横幅に調整してください */
+    width: 200px;
 }
 
 #searchBox {
     width: 100%;
     border: none;
-    padding: 10px; /* 好みのパディングに調整してください */
+    padding: 10px;
+    padding-right: 50px;
     box-sizing: border-box;
-    position: relative;
     height: 40px;
 }
 
-#searchIcon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30%; /* 好みのサイズに調整してください */
-    height: 100%;
-    background-color: #DA4747;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .filter-section {
     text-align: left;
@@ -66,16 +81,16 @@ div{
 .checkbox-container {
     display: flex;
     align-items: center;
-  }
-  
-  .checkbox-container label {
-    text-align: left !important ;
+}
+
+.checkbox-container label {
+    text-align: left !important;
     margin-left: 8px;
-  }
-  
-  .checkbox-container input[type="checkbox"] {
+}
+
+.checkbox-container input[type="checkbox"] {
     vertical-align: middle;
-  }
+}
 
 #filterBox {
     display: none;
@@ -87,11 +102,13 @@ div{
 
     top: 40px;
     left: 0;
-    width: 200px;  /* 必要な幅に調整 */
+    width: 200px;
+    /* 必要な幅に調整 */
     background: white;
-    padding: 10px;  /* 必要なパディングに調整 */
+    padding: 10px;
+    /* 必要なパディングに調整 */
 
-  }
+}
 
 .shiborikomi {
     text-align: left;
@@ -106,29 +123,55 @@ div{
 
 #searchButton {
     width: 100%;
-    height: 30px;  /* 必要な高さに調整 */
+    height: 30px;
+    /* 必要な高さに調整 */
     background: #DA4747;
     color: white;
     border: none;
-    transition: all 0.3s ease;  /* クリックやホバーの状態遷移を滑らかにする*/
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /*ボタンに影をつける*/
-  }
+    transition: all 0.3s ease;
+    /* クリックやホバーの状態遷移を滑らかにする*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /*ボタンに影をつける*/
+}
 
 #searchButton:hover {
-    background-color: #a70c0c;  /* ボタンにホバーしたときの背景色を少し暗くする*/
+    background-color: #a70c0c;
+    /* ボタンにホバーしたときの背景色を少し暗くする*/
 }
 
 #searchButton:active {
-    transform: translateY(2px);  /*ボタンが押されている状態では少し下に動かす*/
+    transform: translateY(7px);
+    /*ボタンが押されている状態では少し下に動かす*/
 }
 
+#searchButton2 {
+    position: absolute; /* 検索窓内の右端にボタンを配置します */
+    right: 0; /* 右端に配置します */
+    top: 0; /* 上端に配置します */
+    height: 100%; /* 検索窓と同じ高さにします */
+    width: 40px; /* 必要に応じてボタンの幅を調整します */
+    border: none; 
+    background: url(img/虫眼鏡圧縮2.png) no-repeat center center; /* 画像を背景として設定します */
+    background-size: contain; /* 画像がボタンにフィットするようにします */
+    transition: all 0.3s ease;
+    /* クリックやホバーの状態遷移を滑らかにする*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /*ボタンに影をつける*/
+}
+
+#searchButton2:active {
+    transform: translateY(7px);
+    /*ボタンが押されている状態では少し下に動かす*/
+}
+
+
 .introduction {
-    text-align:center;
+    text-align: center;
 }
 
 .introduction_text {
     font-size: 12px;
-    font-family: Noto Serif JP ;
+    font-family: Noto Serif JP;
     color: #473131;
 }
 
@@ -139,79 +182,85 @@ div{
     width: 200px;
     height: 50px;
     font-size: 16px;
-    font-family: Noto Sans JP ;
+    font-family: Noto Sans JP;
     border-radius: 100px;
     box-shadow: 2px 2px 4px 0 #473131;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 
 .giftlist_text {
-    font-size:14px;
-    color:#473131;
+    font-size: 14px;
+    color: #473131;
     font-family: Noto Sans JP;
     font-weight: bold;
 }
 
 .line {
-        margin-left:10px;
-        width: 80px;
-        height: 6px;
-        background-color: #F6DA91;
-        
-        border-radius: 3px;
-         margin-bottom:20px;
-    }
+    margin-left: 10px;
+    width: 80px;
+    height: 6px;
+    background-color: #F6DA91;
+
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
 
 
 
 
 .wrapper {
-    max-width: 800px; /* 一定の範囲を800pxに指定 */
-    overflow-x: scroll;
-    }
+    width: flex;
+}
 
 .scroll-container {
     overflow-x: scroll;
     white-space: nowrap;
-    }
+}
 
-    .scroll-item {
+.scroll-item {
     display: inline-block;
     border-radius: 100px;
     background-color: #ccc;
     margin-right: 10px;
-    }
+}
+
 .mattari_button {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px; /* ボタンの幅を指定 */
-    height: 300px; /* ボタンの高さを指定 */
-    border: none; /* ボタンの枠線を消去 */
-    background-color: #fba5a5; /* ボタンの背景色を指定 */
+    width: 200px;
+    /* ボタンの幅を指定 */
+    height: 300px;
+    /* ボタンの高さを指定 */
+    border: none;
+    /* ボタンの枠線を消去 */
+    background-color: #fba5a5;
+    /* ボタンの背景色を指定 */
     border-radius: 30px;
     box-shadow: 1px 1px 2px 0 #962626;
-    cursor: pointer; /* マウスカーソルをポインターにする */
+    cursor: pointer;
+    /* マウスカーソルをポインターにする */
 }
 
 .mattari_image {
-    width: 80%; /* 画像の幅を指定 */
+    width: 80%;
+    /* 画像の幅を指定 */
 }
 
-.mattari_image img{
+.mattari_image img {
     width: 100%;
     height: auto;
 }
 
 .mattari_text {
-    font-size: 15px; /* テキストのフォントサイズを指定 */
-    text-align: center; /* テキストを中央揃えにする */
-    font-family: Noto Sans JP ;
+    font-size: 15px;
+    /* テキストのフォントサイズを指定 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    font-family: Noto Sans JP;
     color: #473131;
     margin-top: 20%;
-    
+
 }
-
-

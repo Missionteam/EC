@@ -15,70 +15,70 @@
 </head>
 
 <body>
-    <p class="subtitle">2人のプレゼント選びを、<br>もっと楽しく。</p>
+    <div class="subtitle配置">
+        <p class="subtitle">2人のプレゼント選びを、<br>もっと楽しく。</p>
+    </div>
 
     <div class="coupleimage">
-        <img src="img/ShopIcon.png" sizes="(max-width: 600px) 60vw, 40vw" alt="Example image">
+        <img src="img/ShopIcon.png" alt="Example image">
     </div>
 
     <!-- 検索窓 -->
     <div class="search-container">
-        <input type="text" id="searchBox" placeholder="条件から選ぶ">
-        <div id="searchIcon">
-            <img src="img/虫眼鏡圧縮3.png" alt="search">
-        </div>
+        <input type="text" id="searchBox" placeholder="条件で絞り込む">
+
+        <button id="searchButton2" onclick="search()"></button>
     </div>
 
     <div id="dropdown" style="display: none;">
-    
+
         <!-- 絞り込み機能 -->
         <div class="filter-section">
-            
-            <p class="shiborikomi">価格</p>
-                <div>
-                    <input type="checkbox" id="price1" name="price" value="low">
-                    <label for="price1" class="label-left">～2000円</label><br>
-                    <input type="checkbox" id="price2" name="price" value="medium">
-                    <label for="price2" class="label-left">2000～5000円</label><br>
-                    <input type="checkbox" id="price3" name="price" value="high">
-                    <label for="price3" class="label-left">5000～10000円</label><br>
-                    <input type="checkbox" id="price4" name="price" value="veryhigh">
-                    <label for="price1" class="label-left">10000～20000円</label><br><br>
-                </div>
-                
-            <p class="shiborikomi">シーン</p>
-                <div>
-                    <input type="checkbox" id="scene1" name="scene" value="event">
-                    <label for="scene1" class="label-left">イベント</label><br>
-                    <input type="checkbox" id="scene2" name="scene" value="birthday">
-                    <label for="scene2" class="label-left">誕生日</label><br>
-                    <input type="checkbox" id="scene3" name="scene" value="anniversary">
-                    <label for="scene2" class="label-left">記念日</label><br>
-                    <input type="checkbox" id="scene4" name="scene" value="outdoors">
-                    <label for="scene2" class="label-left">日常</label><br><br>
-                   
-                </div>
 
-                <p class="shiborikomi">恋人の特徴</p>
-                <div>
-                    <input type="checkbox" id="feature1" name="feature" value="lomantist">
-                    <label for="scene1" class="label-left">ロマンチスト</label><br>
-                    <input type="checkbox" id="feature2" name="feature" value="realist">
-                    <label for="scene2" class="label-left">現実的</label><br>
-                    <input type="checkbox" id="feature3" name="feature" value="obsessed">
-                    <label for="scene2" class="label-left">こだわりが強い</label><br>
-                    <input type="checkbox" id="feature4" name="feature" value="ordinary">
-                    <label for="scene2" class="label-left">日常</label><br><br>
-                   
-                </div>
+            <p class="shiborikomi">価格</p>
+            <div>
+                <input type="checkbox" id="price1" name="price" value="low" class="checkbox">
+                <label for="price1" class="label-left">～2000円</label><br>
+                <input type="checkbox" id="price2" name="price" value="medium" class="checkbox">
+                <label for="price2" class="label-left">2000～5000円</label><br>
+                <input type="checkbox" id="price3" name="price" value="high" class="checkbox">
+                <label for="price3" class="label-left">5000～10000円</label><br>
+                <input type="checkbox" id="price4" name="price" value="veryhigh" class="checkbox">
+                <label for="price1" class="label-left">10000～20000円</label><br><br>
+            </div>
+
+            <p class="shiborikomi">シーン</p>
+            <div>
+                <input type="checkbox" id="scene1" name="scene" value="event" class="checkbox">
+                <label for="scene1" class="label-left">イベント</label><br>
+                <input type="checkbox" id="scene2" name="scene" value="birthday" class="checkbox">
+                <label for="scene2" class="label-left">誕生日</label><br>
+                <input type="checkbox" id="scene3" name="scene" value="anniversary" class="checkbox">
+                <label for="scene2" class="label-left">記念日</label><br>
+                <input type="checkbox" id="scene4" name="scene" value="outdoors" class="checkbox">
+                <label for="scene2" class="label-left">日常</label><br><br>
+
+            </div>
+
+            <p class="shiborikomi">恋人の特徴</p>
+            <div>
+                <input type="checkbox" id="feature1" name="feature" value="lomantist" class="checkbox">
+                <label for="scene1" class="label-left">ロマンチスト</label><br>
+                <input type="checkbox" id="feature2" name="feature" value="realist" class="checkbox">
+                <label for="scene2" class="label-left">現実的</label><br>
+                <input type="checkbox" id="feature3" name="feature" value="obsessed" class="checkbox">
+                <label for="scene2" class="label-left">こだわりが強い</label><br>
+                <br>
+
+            </div>
 
             <!-- 残りのテーマも同様に -->
         </div>
         <button id="searchButton" onclick="search()">検索</button>
-    
+
     </div>
 
-    
+
     <div class="coupleimage">
         <img src="https://basefile.akamaized.net/bluecampus-base-shop/6448b0f7cfb72/E382ABE38383E38397E383AB.png"
             srcset="https://basefile.akamaized.net/bluecampus-base-shop/6448b0f7cfb72/E382ABE38383E38397E383AB.png 1000w,
@@ -113,21 +113,19 @@
 
         </p>
     </div>
-        <div>
-            <br>
+    <div>
+        <br>
 
 
- 
 
-            <br>
-            <br>
-            <br>
 
-            <p class="giftlist_text">〈gift list〉</p>
-            <br>
-        </div>
+       
 
-            <!--
+        <p class="giftlist_text">〈gift list〉</p>
+       
+    </div>
+
+    <!--
         <div style="width:190px;margin-left:auto;margin-right:auto">    
             <!-- 恋人の望む幸せを　->
        <img src="https://basefile.akamaized.net/plushapiness-base-shop/645e440cd0788/5.png"
@@ -136,73 +134,76 @@
         -->
 
 
-            <div class="wrapper">
-                <div class="scroll-container">
-                    <div class="scroll-item">
-                        <a href="https://plus-happiness-about.webflow.io/">
-                            <button class="mattari_button">
-                                <div class="mattari_image">
-                                    <img src="https://basefile.akamaized.net/plushapiness-base-shop/646060afefe4d/E3839AE382A2E383ABE38383E382AF.png"
-                                        alt="Example image">
-                                </div>
-                                <div class="mattari_text">
-                                    おそろいパジャマ
-                                </div>
-                            </button>
-                        </a>
-                    </div>
+    <div class="wrapper">
+        <div class="scroll-container">
 
-                    <div class="scroll-item">
-                        <a href="https://plus-happiness.webflow.io/">
-                            <button class="mattari_button">
-                                <div class="mattari_image">
-                                    <img src="https://basefile.akamaized.net/plushapiness-base-shop/64605ac135ec0/9.png"
-                                        alt="Example image">
-                                </div>
-                                <div class="mattari_text">
-                                    ひとり時間
-                                </div>
-                            </button>
-                        </a>
-                    </div>
+            <div class="scroll-item">
+                <a href="https://plus-happiness-about.webflow.io/">
+                    <button class="mattari_button">
+                        <div class="mattari_image">
+                            <img src="https://basefile.akamaized.net/plushapiness-base-shop/646060afefe4d/E3839AE382A2E383ABE38383E382AF.png"
+                                alt="Example image">
+                        </div>
+                        <div class="mattari_text">
+                            おそろいパジャマ
+                        </div>
+                    </button>
+                </a>
+            </div>
 
-                    <div class="scroll-item">
-                        <a href="https://plus-happiness-about.webflow.io/massage/">
-                            <button class="mattari_button">
-                                <div class="mattari_image">
-                                    <img src="https://basefile.akamaized.net/plushapiness-base-shop/6460607ee82fe/11.png"
-                                        alt="Example image">
-                                </div>
-                                <div class="mattari_text">
-                                    マッサージでおもてなし
-                                </div>
-                            </button>
-                        </a>
-                    </div>
-                    <!--
-    <div style="width:190px;margin-left:auto;margin-right:auto">    
-        <!-- シーン別　->
-     <img src="https://basefile.akamaized.net/plushapiness-base-shop/645e441b1d7b2/6.png"
-       width="100px"> 
+            <div class="scroll-item">
+                <a href="https://plus-happiness.webflow.io/">
+                    <button class="mattari_button">
+                        <div class="mattari_image">
+                            <img src="https://basefile.akamaized.net/plushapiness-base-shop/64605ac135ec0/9.png"
+                                alt="Example image">
+                        </div>
+                        <div class="mattari_text">
+                            ひとり時間
+                        </div>
+                    </button>
+                </a>
+            </div>
+
+            <div class="scroll-item">
+                <a href="https://plus-happiness-about.webflow.io/massage/">
+                    <button class="mattari_button">
+                        <div class="mattari_image">
+                            <img src="https://basefile.akamaized.net/plushapiness-base-shop/6460607ee82fe/11.png"
+                                alt="Example image">
+                        </div>
+                        <div class="mattari_text">
+                            マッサージでおもてなし
+                        </div>
+                    </button>
+                </a>
+            </div>
+            <!--
+            <div style="width:190px;margin-left:auto;margin-right:auto">    
+                <!-- シーン別　->
+            <img src="https://basefile.akamaized.net/plushapiness-base-shop/645e441b1d7b2/6.png"
+            width="100px"> 
+            </div>
+            -->
+            <div class="scroll-item">
+                <a href="https://plus-happiness.webflow.io/reconciliation/">
+                    <button class="mattari_button">
+                        <div class="mattari_image">
+                            <img src="https://basefile.akamaized.net/plushapiness-base-shop/64606098f1ba0/12.png"
+                                alt="Example image">
+                        </div>
+                        <div class="mattari_text">
+                            喧嘩しちゃった…
+                        </div>
+                    </button>
+                </a>
+            </div>
+
+            <!--以下はscroll-containerとwrapperの終わり-->
+        </div>
     </div>
-    -->
-                    <div class="scroll-item">
-                        <a href="https://plus-happiness.webflow.io/reconciliation/">
-                            <button class="mattari_button">
-                                <div class="mattari_image">
-                                    <img src="https://basefile.akamaized.net/plushapiness-base-shop/64606098f1ba0/12.png"
-                                        alt="Example image">
-                                </div>
-                                <div class="mattari_text">
-                                    喧嘩しちゃった…
-                                </div>
-                            </button>
-                        </a>
-                    </div>
 
-                
-
-        <script src="main.js"></script>
+            <script src="main.js"></script>
 </body>
 
 </html>
