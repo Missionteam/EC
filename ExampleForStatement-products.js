@@ -1,3 +1,6 @@
+///こっちは現在使用していない。
+///短く書く例として
+
 window.onload = function () {
     // 商品の表示領域を取得
     var productsDiv = document.getElementById('products');
@@ -16,9 +19,7 @@ window.onload = function () {
     var feature1Checked = localStorage.getItem('feature1') === 'true';
     var feature2Checked = localStorage.getItem('feature2') === 'true';
     var feature3Checked = localStorage.getItem('feature3') === 'true';
-
-
-
+    
 
     // チェックボックスの状態に基づいて表示する商品を決定
 
@@ -94,74 +95,30 @@ window.onload = function () {
         productsDiv.appendChild(productK);
     }
 
+    /// 以下は、すべてチェックが入っていないときの動作。
+    ///こういう感じで短く書くことができる。
+    var productNames = ['A', 'B', 'B_2', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
+    var checkedItems = [
+        price1Checked,
+        price2Checked,
+        price3Checked,
+        price4Checked,
+        scene1Checked,
+        scene2Checked,
+        scene3Checked,
+        scene4Checked,
+        feature1Checked,
+        feature2Checked,
+        feature3Checked
+    ];
 
-    /// price1Checkedなどには、上の式でtrueかfalseが入っている。
-    /// trueかfalseを返すものをbooleanという。
-    /// booleanの先頭に！をつけると、それと反対を返す。つまり(!false)=trueである。
-    /// A&&B&&CはAかつBかつCの意味。
-
-    ///つまり、これは、すべてにcheckが入っていない、という条件を書いている。
-    if (!price1Checked && 
-        !price2Checked && 
-        !price3Checked && 
-        !price4Checked && 
-        !scene1Checked && 
-        !scene2Checked && 
-        !scene3Checked && 
-        !scene4Checked && 
-        !feature1Checked && 
-        !feature2Checked && 
-        !feature3Checked) {
-            ///さらに、その中で、各productを表示させるコードを書いている。
-            var productA = document.getElementById('productA');
-            productA.style.display = "block";
-            productsDiv.appendChild(productA);
-            
-            ///ただし、この書き方はとても冗長なので、本当はfor文などを用いて、
-            ///もっと短く書くべきである。
-            ///短く書いた例を、ExampleForStatement-product.jsに記入している。
-            var productB = document.getElementById('productB');
-            productB.style.display = "block";
-            productsDiv.appendChild(productB);
-            
-            var productB_2 = document.getElementById('productB_2');
-            productB_2.style.display = "block";
-            productsDiv.appendChild(productB_2);
-            
-            var productC = document.getElementById('productC');
-            productC.style.display = "block";
-            productsDiv.appendChild(productC);
-            
-            var productD = document.getElementById('productD');
-            productD.style.display = "block";
-            productsDiv.appendChild(productD);
-            
-            var productE = document.getElementById('productE');
-            productE.style.display = "block";
-            productsDiv.appendChild(productE);
-            
-            var productF = document.getElementById('productF');
-            productF.style.display = "block";
-            productsDiv.appendChild(productF);
-            
-            var productG = document.getElementById('productG');
-            productG.style.display = "block";
-            productsDiv.appendChild(productG);
-            
-            var productH = document.getElementById('productH');
-            productH.style.display = "block";
-            productsDiv.appendChild(productH);
-            
-            var productI = document.getElementById('productI');
-            productI.style.display = "block";
-            productsDiv.appendChild(productI);
-            
-            var productJ = document.getElementById('productJ');
-            productJ.style.display = "block";
-            productsDiv.appendChild(productJ);
-            
-            var productK = document.getElementById('productK');
-            productK.style.display = "block";
-            productsDiv.appendChild(productK);
+    if (checkedItems.every(item => item === false)) {
+        // すべての変数が false の場合に実行されるコードをここに記述します
+        productNames.forEach(name => {
+            var product = document.getElementById('product' + name);
+            product.style.display = "block";
+            productsDiv.appendChild(product);
+        })
     }
+
 }
