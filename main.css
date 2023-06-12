@@ -151,7 +151,7 @@ a {
     height: 100%; /* 検索窓と同じ高さにします */
     width: 40px; /* 必要に応じてボタンの幅を調整します */
     border: none; 
-    background: url(img/虫眼鏡圧縮2.png) no-repeat center center; /* 画像を背景として設定します */
+    background: url(img/glass.png) no-repeat center center; /* 画像を背景として設定します */
     background-size: contain; /* 画像がボタンにフィットするようにします */
     transition: all 0.3s ease;
     /* クリックやホバーの状態遷移を滑らかにする*/
