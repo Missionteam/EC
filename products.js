@@ -25,7 +25,12 @@ window.onload = function () {
     if (price1Checked) {
         var productA = document.getElementById('productA');
         productA.style.display = "block";  // 商品Aを表示に設定
+
+        var productA2 = document.getElementById('productA2');
+        productA2.style.display = "block";
+
         productsDiv.appendChild(productA);  // 商品Aを表示
+        productsDiv.appendChild(productA2);
     }
 
     if (price2Checked) {
